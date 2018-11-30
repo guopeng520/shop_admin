@@ -2,18 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Router from 'vue-router'
-import Login from './components/login/Login'
-import Home from './components/home/Home'
+import router from './router'
 
-Vue.use(Router)
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import '@/assets/css/index.css'
 
-const router = new Router({
-  routes: [
-    { path: '/login', component: Login },
-    { path: '/home', component: Home }
-  ]
-})
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
